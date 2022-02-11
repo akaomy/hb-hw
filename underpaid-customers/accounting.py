@@ -24,38 +24,18 @@ customer6_name = "Ashley"
 customer6_melons = 3
 customer6_paid = 2.00
 
-customer1_expected = customer1_melons * melon_cost
-if customer1_expected != customer1_paid:
-    print(f"{customer1_name} paid ${customer1_paid:.2f},",
-          f"expected ${customer1_expected:.2f}"
-          )
 
-customer2_expected = customer2_melons * melon_cost
-if customer2_expected != customer2_paid:
-    print(f"{customer2_name} paid ${customer2_paid:.2f},",
-          f"expected ${customer2_expected:.2f}"
-          )
+''' Checks if expected payment is equal to the amoun paid '''
+def check_payment_discrepancies(melon_cost, customer_name, melons_bought, customer_paid):
+    expected = melons_bought * melon_cost
+    if expected != customer_paid:
+        print(f"{customer_name} paid ${customer_paid:.2f},", f"expected ${expected:.2f}")
+    else:
+        print(f'{customer_name} paid for product in full')
 
-customer3_expected = customer3_melons * melon_cost
-if customer3_expected != customer3_paid:
-    print(f"{customer3_name} paid ${customer3_paid:.2f},",
-          f"expected ${customer3_expected:.2f}"
-          )
-
-customer4_expected = customer4_melons * melon_cost
-if customer4_expected != customer4_paid:
-    print(f"{customer4_name} paid ${customer4_paid:.2f},",
-          f"expected ${customer4_expected:.2f}"
-          )
-
-customer5_expected = customer5_melons * melon_cost
-if customer5_expected != customer5_paid:
-    print(f"{customer5_name} paid ${customer5_paid:.2f},",
-          f"expected ${customer5_expected:.2f}"
-          )
-
-customer6_expected = customer6_melons * melon_cost
-if customer6_expected != customer6_paid:
-    print(f"{customer6_name} paid ${customer6_paid:.2f},",
-          f"expected ${customer6_expected:.2f}"
-          )
+check_payment_discrepancies(melon_cost, customer1_name, customer1_melons, customer1_paid)
+check_payment_discrepancies(melon_cost, customer2_name, customer2_melons, customer2_paid)
+check_payment_discrepancies(melon_cost, customer3_name, customer3_melons, customer3_paid)
+check_payment_discrepancies(melon_cost, customer4_name, customer4_melons, customer4_paid)
+check_payment_discrepancies(melon_cost, customer5_name, customer5_melons, customer5_paid)
+check_payment_discrepancies(melon_cost, customer6_name, customer6_melons, customer6_paid)
