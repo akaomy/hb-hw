@@ -1,18 +1,17 @@
 """Print out all the melons in our inventory."""
 
 
-from melons import melon_names, melon_seedlessness, melon_prices
+from melons import melons
 
 
-def print_melon(name, seedless, price):
+def print_melon(melons_name, melons_info_list):
     """Print each melon with corresponding attribute information."""
-
+    sedless = melons_info_list[1]
     have_or_have_not = 'have'
-    if seedless:
+    if sedless:
         have_or_have_not = 'do not have'
+    print(f'{melons_name}s {have_or_have_not} seeds. It weights {melons_info_list[3]}, flesh color is {melons_info_list[2]}, rind color {melons_info_list[4]} and priced as ${melons_info_list[0]:.2f}')
 
-    print(f'{name}s {have_or_have_not} seeds and are ${price:.2f}')
 
-
-for i in melon_names:
-    print_melon(melon_names[i], melon_seedlessness[i], melon_prices[i])
+for i in melons:
+    print_melon(i, list(melons[i].values()))
