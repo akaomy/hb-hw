@@ -1,1 +1,1 @@
-Hackbright homework files collection
+Homework assignments that were done during participation at Hackbright coding bootcamp
